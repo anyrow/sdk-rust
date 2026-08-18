@@ -1,0 +1,28 @@
+[package]
+name = "anyrow"
+version = "1.0.0"
+edition = "2021"
+rust-version = "1.75"
+description = "Rust SDK for the Anyrow extraction API."
+homepage = "https://anyrow.ai"
+repository = "https://github.com/anyrow/sdk-rust"
+license = "MIT"
+
+[dependencies]
+tokio = { version = "^1.40", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tokio-util = { version = "^0.7", features = ["rt"] }
+reqwest = { version = "^0.12", default-features = false, features = ["json", "stream", "rustls-tls", "multipart", "blocking"] }
+tokio-tungstenite = { version = "^0.24", features = ["rustls-tls-webpki-roots"] }
+futures = "^0.3"
+futures-util = "^0.3"
+serde = { version = "^1.0", features = ["derive"] }
+serde_json = "^1.0"
+serde_repr = "^0.1"
+url = "^2.5"
+urlencoding = "^2.1"
+regex = "^1.10"
+once_cell = "^1.20"
+bytes = "^1.7"
+uuid = { version = "^1", features = ["v4"] }
+async-trait = "^0.1"
+async-stream = "^0.3"
